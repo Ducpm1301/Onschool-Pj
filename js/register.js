@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+                                        //INFO TOGGLE
+
     $(".flip").click(function(){
         $(".panel").slideToggle("100000");
     });
@@ -7,6 +10,9 @@ $(document).ready(function(){
         }, function(){
         $(this).css("text-decoration", "none");
       });
+
+                                        //FORM VALIDATION
+                                        
     $(".formValidation").validate({
         rules:{
             studentId : 'required',
@@ -27,10 +33,9 @@ $(document).ready(function(){
             email: '<small style ="color:red"><em>* Hãy điền email *</em></small>',
         }
     })
-    // const info = ['studentId','fileId','fname','lname','birth','birthPlace','email'];
-    // $(".submitBtn").click(function(){
-        
-    // })
+
+                                //Gender select box validation
+
     $(".submitBtn").click(function(){
         if ($('#gender').val() === ""){
             $('#errorMsg').html("<small style ='color:red'><em>* Hãy chọn giới tính của bạn *</em></small>");

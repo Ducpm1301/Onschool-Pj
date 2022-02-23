@@ -1,5 +1,8 @@
 
 $(document).ready(function(){    
+
+                                    //LOGIN VALIDATION
+                                    
     $("#loginForm").validate({
         rules:{
             email:{
@@ -16,6 +19,9 @@ $(document).ready(function(){
             password:'<small><em style ="color:red">* Please enter your password *</em></small>'
         }
     })
+
+                    //KEEP BUTTON UNSUBMIT WHEN INPUT FIELD IS EMPTY
+
     $("#btnSubmit").click(function(){
         $("input")
     })
