@@ -114,6 +114,7 @@
                             <div class="col">
                                 <label for="number" class="form-label fw-bold">Điện thoại</label>
                                 <input type ="text" id ="number" name = 'number' class="form-control shadow bg-body rounded">
+                                <span id="errorMsgNumber"></span>
                             </div>
                             <div class="col">
                                 <label for="email" class="form-label fw-bold">Email cá nhân</label>
@@ -137,13 +138,13 @@
                         <div>
                             <label for ="status" class="form-label fw-bold">Trạng thái sinh viên</label>
                             <select name="studentStt" id="studentStt" class="form-control shadow bg-body rounded">
-                                <option value="choose">--Chọn trạng thái--</option>
+                                <option value="" default selected>--Chọn trạng thái--</option>
                                 <option value="freshmen">Sinh viên năm nhất</option>
                                 <option value="2nd">Sinh viên năm hai</option>
                                 <option value="3rd">Sinh viên năm ba</option>
                                 <option value="4th">Sinh viên năm tư</option>
                             </select>
-                            <span id="errorMsg2"></span>
+                            <span id="errorMsgStatus"></span>
                         </div>
                     </div>
 
