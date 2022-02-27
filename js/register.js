@@ -47,7 +47,7 @@ $(document).ready(function(){
             },
             address:'<small style ="color:red"><em>* Hãy điền thông tin vào ô trống *</em></small>'
         },
-    })
+    });
 
                                 //Gender select box validation
 
