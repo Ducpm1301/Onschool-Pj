@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../fontawesome/fontawesome-free-5.15.4-web/css/all.min.css""
+    <link rel="stylesheet" href="../fontawesome/fontawesome-free-5.15.4-web/css/all.min.css">
     <link rel="stylesheet" href="../fontawesome/fontawesome-free-5.15.4-web/css/fontawesome.min.css">
     <script src="../jquery/jquery.js"></script>
     <script src ="../jquery/jqueryValidationPlugin.js"></script>
@@ -35,7 +35,7 @@
 
                                     <!-- STUDENT INFOMATION FORM -->
 
-                <form class ="formValidation panel">
+                <form class ="formValidation panel" id = "validationForm">
                     <div class="container mb-2 ">
                         <div class ="row">
                             <div>
@@ -64,7 +64,7 @@
                     </div>
                     <div class="container mb-2">
                         <div class="row">
-                            <div class="col-4"">
+                            <div class="col-4">
                                 <label class="form-label fw-bold">Giới tính</label>
                                 <select class="form-control shadow bg-body rounded" name ="gender" id ="gender">
                                     <option value="" default selected>--Chọn giới tính--</option>
@@ -143,6 +143,7 @@
                                 <option value="3rd">Sinh viên năm ba</option>
                                 <option value="4th">Sinh viên năm tư</option>
                             </select>
+                            <span id="errorMsg2"></span>
                         </div>
                     </div>
 
