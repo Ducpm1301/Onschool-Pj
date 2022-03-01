@@ -13,17 +13,11 @@ $(document).ready(function(){
         },
         messages:{
             email:{
-                required:'<small><em style ="color:red">* Please enter your email *</em></small>',
-                email:'<small><em style ="color:red">* Please enter a valid email *</em></small>'
+                required:'<small><em style ="color:red">* Hãy điền email của bạn *</em></small>',
+                email:'<small><em style ="color:red">* Hãy điền đúng định dạng email *</em></small>'
             },
-            password:'<small><em style ="color:red">* Please enter your password *</em></small>'
+            password:'<small><em style ="color:red">* Hãy điền mật khẩu *</em></small>'
         }
-    })
-
-                    //KEEP BUTTON UNSUBMIT WHEN INPUT FIELD IS EMPTY
-
-    $("#btnSubmit").click(function(){
-        $("input")
     })
 });
     

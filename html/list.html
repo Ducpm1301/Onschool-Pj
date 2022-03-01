@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Danh sách sinh viên</title>
     <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../fontawesome/fontawesome-free-5.15.4-web/css/all.min.css">
     <link rel="stylesheet" href="../fontawesome/fontawesome-free-5.15.4-web/css/fontawesome.min.css">
-    <script src="../jquery/jquery.js"></script>
     <link rel="stylesheet" href="../css/list.css">
+    <script src="../jquery/jquery.js"></script>
 </head>
 <body>
 
@@ -21,7 +21,7 @@
                 <h1 class="text-center">Danh sách sinh viên</h1>
             </div>
             <div class="col moveBtn">
-                <button class="btn addBtn float-end">+ Thêm mới sinh viên</button>
+                <button class="btn addBtn float-end" href ="addstudents.html" onclick ="window.location.href=this.getAttribute('href');return false;">+ Thêm mới sinh viên</button>
             </div>
         </div>
     </div>
@@ -144,7 +144,11 @@
     <div class="container">
         <div class="row">
             <div class="col d-flex justify-content-end">
-                <span><i class="fas fa-caret-left"></i> 1 <i class="fas fa-caret-right"></i></span>
+                <ul class="pagination pagination-sm">
+                    <li class ="page-item"><a href="#" class="page-link"><i class="fas fa-caret-left"></i></a></li>
+                    <li class ="page-item"> <a href="#" class="page-link">1</a></li>
+                    <li class ="page-item"><a href="#" class="page-link"><i class="fas fa-caret-right"></i></a></li>
+                </ul>
             </div>
             <div class="col d-flex justify-content-end">
                 <label class ="me-2 text-light">Số bản ghi mỗi trang</label>
@@ -156,5 +160,6 @@
             </div>
         </div>
     </div>
+
 </body>
 </html>

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Thêm thông tin sinh viên</title>
     <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../fontawesome/fontawesome-free-5.15.4-web/css/all.min.css""
+    <link rel="stylesheet" href="../fontawesome/fontawesome-free-5.15.4-web/css/all.min.css">
     <link rel="stylesheet" href="../fontawesome/fontawesome-free-5.15.4-web/css/fontawesome.min.css">
     <script src="../jquery/jquery.js"></script>
     <script src ="../jquery/jqueryValidationPlugin.js"></script>
@@ -64,7 +64,7 @@
                     </div>
                     <div class="container mb-2">
                         <div class="row">
-                            <div class="col-4"">
+                            <div class="col-4">
                                 <label class="form-label fw-bold">Giới tính</label>
                                 <select class="form-control shadow bg-body rounded" name ="gender" id ="gender">
                                     <option value="" default selected>--Chọn giới tính--</option>
@@ -114,6 +114,7 @@
                             <div class="col">
                                 <label for="number" class="form-label fw-bold">Điện thoại</label>
                                 <input type ="text" id ="number" name = 'number' class="form-control shadow bg-body rounded">
+                                <span id="errorMsgNumber"></span>
                             </div>
                             <div class="col">
                                 <label for="email" class="form-label fw-bold">Email cá nhân</label>
@@ -137,12 +138,13 @@
                         <div>
                             <label for ="status" class="form-label fw-bold">Trạng thái sinh viên</label>
                             <select name="studentStt" id="studentStt" class="form-control shadow bg-body rounded">
-                                <option value="choose">--Chọn trạng thái--</option>
+                                <option value="" default selected>--Chọn trạng thái--</option>
                                 <option value="freshmen">Sinh viên năm nhất</option>
                                 <option value="2nd">Sinh viên năm hai</option>
                                 <option value="3rd">Sinh viên năm ba</option>
                                 <option value="4th">Sinh viên năm tư</option>
                             </select>
+                            <span id="errorMsgStatus"></span>
                         </div>
                     </div>
 
@@ -153,7 +155,7 @@
                             <button class ="btn submitBtn btn-primary">Thêm mới</button>
                         </div>
                         <div class="m-3">
-                            <button class ="btn cancelBtn btn-danger">Hủy</button>
+                            <button class ="btn cancelBtn btn-danger" href ="list.html" onclick ="window.location.href=this.getAttribute('href');return false;">Hủy</button>
                         </div>               
                     </div>
                 </form>
