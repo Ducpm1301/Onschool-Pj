@@ -100,4 +100,11 @@ $(document).ready(function(){
         return this.optional(element) || phone_number.length > 9 &&
         phone_number.match(/^(\(?(0|\+84)[2|3|8|9]{1}\d{1,4}?\)?\s?\d{3,4}\s?\d{3,4})$/);
     })
+
+    $("#submitBtn").click(function() {
+        var x = $("#formValidation").serializeArray();
+        $.each(x, function(i, field) {
+            console.log(field.name + ":"+ field.value + " ")
+        });
+    });
 })

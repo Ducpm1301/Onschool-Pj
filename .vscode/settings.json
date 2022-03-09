@@ -8,10 +8,10 @@
             "server": "localhost",
             "port": 3306,
             "driver": "MySQL",
-            "name": "OnschoolPj",
-            "database": "studentInfo",
-            "username": "admin",
-            "password": "Ducbop1301"
+            "name": "MySQL",
+            "database": "Onschool Pj",
+            "username": "1",
+            "password": "123456"
         }
     ]
 }

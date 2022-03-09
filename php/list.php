@@ -10,18 +10,20 @@
     <link rel="stylesheet" href="../fontawesome/fontawesome-free-5.15.4-web/css/fontawesome.min.css">
     <link rel="stylesheet" href="../css/list.css">
     <script src="../jquery/jquery.js"></script>
+    <script src = "../js/list.js"></script>
 </head>
 <body>
 
                                         <!-- HEADER -->
-
+    <div class="container">
+    </div>
     <div class="container">
         <div class="row block">
             <div class="col">
                 <h1 class="text-center">Danh sách sinh viên</h1>
             </div>
             <div class="col moveBtn">
-                <button class="btn addBtn float-end" href ="addstudents.html" onclick ="window.location.href=this.getAttribute('href');">+ Thêm mới sinh viên</button>
+                <button class="btn addBtn float-end" onclick="document.location.href='addstudent.php'">+ Thêm mới sinh viên</button>
             </div>
         </div>
     </div>
