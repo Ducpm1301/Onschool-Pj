@@ -19,6 +19,5 @@ $(document).ready(function(){
             password:'<small><em style ="color:red">* Hãy điền mật khẩu *</em></small>'
         }
     })
-    clearResponse();
 });
     

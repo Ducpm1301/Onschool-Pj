@@ -22,40 +22,40 @@
     
     // make sure data is not empty
     if(
-        !empty($data->fileId) &&
-        !empty($data->studentId) &&
-        !empty($data->fname) &&
-        !empty($data->lname) &&
+        !empty($data->profile_code) &&
+        !empty($data->student_code) &&
+        !empty($data->firstname) &&
+        !empty($data->lastname) &&
         !empty($data->gender) &&
-        !empty($data->birth) &&
-        !empty($data->birthPlace) &&
+        !empty($data->date_of_birth) &&
+        !empty($data->place_of_birth) &&
         !empty($data->race) &&
         !empty($data->religion) &&
-        !empty($data->number) &&
+        !empty($data->phone) &&
         !empty($data->email) &&
         !empty($data->noicap) &&
         !empty($data->address) &&
-        !empty($data->citizenId) &&
+        !empty($data->identity_number) &&
         !empty($data->studentStt) &&
         !empty($data->note)
 
     ){
     
         // set student property values
-        $student->profile_code = $data->fileId;
-        $student->student_code = $data->studentId;
-        $student->firstname = $data->fname;
-        $student->lastname = $data->lname;
+        $student->profile_code = $data->profile_code;
+        $student->student_code = $data->student_code;
+        $student->firstname = $data->firstname;
+        $student->lastname = $data->lastname;
         $student->gender = $data->gender;
-        $student->date_of_birth = $data->birth;
-        $student->place_of_birth = $data->birthPlace;
+        $student->date_of_birth = $data->date_of_birth;
+        $student->place_of_birth = $data->place_of_birth;
         $student->race = $data->race;
         $student->religion = $data->religion;
-        $student->phone = $data->number;
+        $student->phone = $data->phone;
         $student->email = $data->email;
         $student->noicap = $data->noicap;
         $student->address = $data->address;
-        $student->identity_number = $data->citizenId;
+        $student->identity_number = $data->identity_number;
         $student->student_status = $data->studentStt;
         $student->note = $data->note;
     

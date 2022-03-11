@@ -8,24 +8,20 @@ $(document).ready(function(){
     }
     setCookie("jwt", "", 1);
 
-     // show home page
+    // show home page
     function showHomePage(){
-            
+    
         // validate jwt to verify access
         var jwt = getCookie('jwt');
-        $.post("api/validate_token.php", JSON.stringify({ jwt:jwt })).done(function(result) {
-            window.location.href = '../php/list.php';
-            return false;
+        $.post("../api/validate_token.php", JSON.stringify({ jwt:jwt })).done(function(result) {
+            $(location).attr(
+                "href",
+                "../php/list.php"
+              );
         })
-
-        // show login page on error
-        .fail(function(result){
-            window.location.href = '../php/login.php'
-            $('#response').html("<div class='alert alert-danger'>Please login to access the home page.</div>");
-        });
     }
-
-    // get or read Cookie
+    showHomePage();
+    
     function getCookie(cname){
         var name = cname + "=";
         var decodedCookie = decodeURIComponent(document.cookie);
@@ -42,9 +38,10 @@ $(document).ready(function(){
         }
         return "";
     }
+    
+    // showLoggedInMenu() will be here
 
-    // remove any prompt messages
-    function clearResponse(){
-        $('#response').html('');
-}
+    // get or read Cookie
+    
+
 })

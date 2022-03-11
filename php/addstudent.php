@@ -40,27 +40,27 @@
                     <div class="container mb-2">
                         <div>
                             <label for="fileId" class="form-label fw-bold">Mã hồ sơ</label>
-                            <input type="text" class="form-control shadow bg-body" name = "fileId" id="fileId">
+                            <input type="text" class="form-control shadow bg-body" name = "fileId" id="profiel_code">
                         </div>
                     </div>
                     <div class="container mb-2 ">
                         <div class ="row">
                             <div>
                                 <label for = "studentId" class = "form-label fw-bold"> Mã sinh viên </label>
-                                <input type = "text" class = "form-control shadow bg-body" name = "studentId" id = "studentId">
+                                <input type = "text" class = "form-control shadow bg-body" name = "studentId" id = "student_code">
                             </div>
                         </div>
                     </div>
                     <div class="container mb-2">
                             <div>
                                 <label for="fname" class="form-label fw-bold">Họ và tên đệm</label>
-                                <input type="text" class="form-control shadow bg-body rounded" name = "fname" id="fname">     
+                                <input type="text" class="form-control shadow bg-body rounded" name = "fname" id="firstname">     
                             </div>
                     </div>
                     <div class="container mb-2">
                         <div>
                             <label for="lname" class="form-label fw-bold">Tên</label>
-                            <input type="text" class="form-control shadow bg-body rounded" name = "lname" id="lname">
+                            <input type="text" class="form-control shadow bg-body rounded" name = "lname" id="lastname">
                         </div>
                     </div>
                     <div class="container mb-2">
@@ -76,14 +76,14 @@
                             </div>
                             <div class="col-8">
                                 <label for="birth" class="form-label fw-bold">Ngày sinh</label>
-                                <input type ="date" id ="birth" name = "birth" class="form-control shadow bg-body rounded">
+                                <input type ="date" id ="date_of_birth" name = "birth" class="form-control shadow bg-body rounded">
                             </div>
                         </div>
                     </div>
                     <div class="container mb-2">
                         <div>
                             <label for="birthplace" class="form-label fw-bold">Nơi sinh</label>
-                            <input type ="text" id ="birthPlace"  name = "birthPlace" class="form-control shadow bg-body rounded">                            
+                            <input type ="text" id ="place_of_birth"  name = "birthPlace" class="form-control shadow bg-body rounded">                            
                         </div>
                     </div>
                     <div class="container mb-2">
@@ -102,7 +102,7 @@
                         <div class="row">
                             <div class="col">
                                 <label for="cmnd" class="form-label fw-bold">Số CMND/CCCD</label>
-                                <input type ="text" id ="citizenId"  name = "citizenId" class="form-control shadow bg-body rounded">
+                                <input type ="text" id ="identity_number"  name = "citizenId" class="form-control shadow bg-body rounded">
                             </div>
                             <div class="col">
                                 <label for="noicap" class="form-label fw-bold">Nơi cấp</label>
@@ -114,7 +114,7 @@
                         <div class="row">
                             <div class="col">
                                 <label for="number" class="form-label fw-bold">Điện thoại</label>
-                                <input type ="text" id ="number" name = 'number' class="form-control shadow bg-body rounded">
+                                <input type ="text" id ="phone" name = 'number' class="form-control shadow bg-body rounded">
                                 <span id="errorMsgNumber"></span>
                             </div>
                             <div class="col">

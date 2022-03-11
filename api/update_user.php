@@ -69,7 +69,7 @@
                 // response in json format
                 echo json_encode(
                         array(
-                            "message" => "User was updated.",
+                            "message" => "Thông tin người dùng đã được cập nhật.",
                             "jwt" => $jwt
                         )
                     );
@@ -81,7 +81,7 @@
                 http_response_code(401);
             
                 // show error message
-                echo json_encode(array("message" => "Unable to update user."));
+                echo json_encode(array("message" => "Không thể cập nhật thông tin người dùng."));
             }
         }
     
@@ -93,7 +93,7 @@
         
             // show error message
             echo json_encode(array(
-                "message" => "Access denied.",
+                "message" => "Truy cập bị từ chối.",
                 "error" => $e->getMessage()
             ));
         }
@@ -106,5 +106,5 @@
         http_response_code(401);
     
         // tell the user access denied
-        echo json_encode(array("message" => "Access denied."));
+        echo json_encode(array("message" => "Truy cập bị từ chối."));
     }

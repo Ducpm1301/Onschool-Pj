@@ -39,7 +39,6 @@
         $token = array(
         "iat" => $issued_at,
         "exp" => $expiration_time,
-        "iss" => $issuer,
         "data" => array(
             "id" => $user->id,
             "name" => $user->name,
@@ -54,7 +53,7 @@
         $jwt = JWT::encode($token, $key,'HS256');
         echo json_encode(
                 array(
-                    "message" => "Successful login.",
+                    "message" => "Đăng nhập thành công.",
                     "jwt" => $jwt
                 )
             );
@@ -68,5 +67,5 @@
         http_response_code(401);
     
         // tell the user login failed
-        echo json_encode(array("message" => "Login failed."));
+        echo json_encode(array("message" => "Đăng nhập thất bại."));
     }

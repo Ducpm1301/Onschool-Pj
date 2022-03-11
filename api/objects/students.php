@@ -65,7 +65,7 @@ class Student{
                     noicap =:noicap, 
                     address =:address, 
                     identity_number =:identity_number, 
-                    student_status =:student_status, 
+                    student_status =:studentStt, 
                     note =:note";
     
         // prepare query
@@ -104,7 +104,7 @@ class Student{
         $stmt->bindParam(":noicap", $this->noicap);
         $stmt->bindParam(":address", $this->address);
         $stmt->bindParam(":identity_number", $this->identity_number);
-        $stmt->bindParam(":student_status", $this->student_status);
+        $stmt->bindParam(":studentStt", $this->student_status);
         $stmt->bindParam(":note", $this->note);
     
         // execute query
@@ -229,26 +229,26 @@ class Student{
     }
 
     // delete the product
-function delete(){
-  
-        // delete query
-        $query = "DELETE FROM " . $this->table_name . " WHERE id = ?";
+    function delete(){
     
-        // prepare query
-        $stmt = $this->conn->prepare($query);
-    
-        // sanitize
-        $this->id=htmlspecialchars(strip_tags($this->id));
-    
-        // bind id of record to delete
-        $stmt->bindParam(1, $this->id);
-    
-        // execute query
-        if($stmt->execute()){
-            return true;
-        }
-    
-        return false;
+            // delete query
+            $query = "DELETE FROM " . $this->table_name . " WHERE id = ?";
+        
+            // prepare query
+            $stmt = $this->conn->prepare($query);
+        
+            // sanitize
+            $this->id=htmlspecialchars(strip_tags($this->id));
+        
+            // bind id of record to delete
+            $stmt->bindParam(1, $this->id);
+        
+            // execute query
+            if($stmt->execute()){
+                return true;
+            }
+        
+            return false;
     }
 
     // search students

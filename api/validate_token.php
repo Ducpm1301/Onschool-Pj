@@ -23,7 +23,7 @@
     $jwt=isset($data->jwt) ? $data->jwt : "";
     
     // if jwt is not empty
-    if($jwt){
+    if($jwt !== ""){
     
         // if decode succeed, show user details
         try {
@@ -35,7 +35,7 @@
     
             // show user details
             echo json_encode(array(
-                "message" => "Access granted.",
+                "message" => "Cho phép truy cập.",
                 "data" => $decoded->data
             ));
     
@@ -49,7 +49,7 @@
         
             // tell the user access denied  & show error message
             echo json_encode(array(
-                "message" => "Access denied.",
+                "message" => "Truy cập bị từ chối..",
                 "error" => $e->getMessage()
             ));
         }
@@ -63,5 +63,5 @@
         http_response_code(401);
     
         // tell the user access denied
-        echo json_encode(array("message" => "Access denied."));
+        echo json_encode(array("message" => "Truy cập bị từ chối.."));
     }
