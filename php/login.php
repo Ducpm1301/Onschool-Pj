@@ -1,3 +1,6 @@
+<?php
+    error_reporting(0);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,12 +14,14 @@
     <script src="../jquery/jquery.js"></script>
     <script src ="../jquery/jqueryValidationPlugin.js"></script>
     <script src ="../js/login.js"></script>
+    <script src ="../js/function.js"></script>
 </head>
 <body class ="d-flex justify-content-center align-items-center" class ="bg-image" style ="background-image:url(../img/1.png);height:100%;background-repeat: no-repeat;background-size: cover;">
     <div class ="container col-md-4 col-md-offset-4 pt-5">
         <fieldset class ="bg-white">
             <form class ="m-3 text-center" id ="loginForm" name ="formValidation" action="" method ="post">
                 <h3 class="text-center pb-4">Login to your account</h3>
+                <span id="response"></span>
                 <div class="container pb-4">
                     <div class="form-group pb-4 row">
                         <div class="col">  
@@ -47,5 +52,40 @@
             </form>
         </fieldset>
     </div>
+    <script>
+        $(document).ready(function(){
+            $("#btnSubmit").on("click", function(){
+ 
+                // get form data
+                var login_form=$("#loginForm");
+                var form_data=JSON.stringify(login_form.serialize());
+                if(login_form !== ""){
+                    // submit form data to api
+                    $.ajax({
+                        url: "api/login-api.php",
+                        type : "POST",
+                        contentType : 'application/json',
+                        data : form_data,
+                        success : function(result){
+                    
+                            // store jwt to cookie
+                            setCookie("jwt", result.jwt, 1);
+                    
+                            // show home page & tell the user it was a successful login
+                            showHomePage();
+                            $('#response').html("<div class='alert alert-success'>Successful login.</div>");
+                    
+                        },
+                        error: function(xhr, resp, text){
+                        // on error, tell the user login has failed & empty the input boxes
+                        $('#response').html("<div class='alert alert-danger'>Login failed. Email or password is incorrect.</div>");
+                        login_form.find('input').val('');
+                        }
+                    });
+                }
+                return false;
+                });
+        })
+    </script>
 </body>
 </html>

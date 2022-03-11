@@ -1,40 +1,3 @@
-<?php
-
-    include '../config/db.php';
-
-    if(isset($_POST['submit'])){
-        $profile_code = $_POST['fileId'];
-        $student_code = $_POST['studentId'];
-        $firstname = $_POST['fname'];
-        $lastname = $_POST['lname'];
-        $gender = $_POST['gender'];
-        $date_of_birth = $_POST['birth'];
-        $place_of_birth = $_POST['birthPlace'];
-        $race = $_POST['race'];
-        $religion = $_POST['religion'];
-        $phone = $_POST['number'];
-        $email = $_POST['email'];
-        $noicap = $_POST['noicap'];
-        $address = $_POST['address'];
-        $identity_number = $_POST['citizenId'];
-        $student_status = $_POST['studentStt'];
-        $note = $_POST['note'];
-
-        $sql = "INSERT INTO `students`(`profile_code`, `student_code`, `firstname`, `lastname`, `gender`, `date_of_birth`, `place_of_birth`, `race`, `religion`, `phone`, `email`, `noicap`, `address`, `identity_number`, `student_status`, `note`) 
-        VALUES (`$profile_code`, `$student_code`, `$firstname`, `$lastname`, `$gender`, `$date_of_birth`, `$place_of_birth`, `$race`, `$religion`, `$phone`, `$email`, `$noicap`, `$address`, `$identity_number`, `$student_status`, `$note`)";
-
-        $result = mysqli_query($con, $sql);
-
-        if ($result){
-            echo ('Data insert successfully!');
-        }else{
-            header('location:addstudent.php?error=dataInsertUnsuccessful');
-            die('Data insert unsuccessfully!');
-        }
-    }
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,6 +11,7 @@
     <script src="../jquery/jquery.js"></script>
     <script src ="../jquery/jqueryValidationPlugin.js"></script>
     <script src ="../js/register.js"></script>
+    <script src ="../app/create_student.js"></script>
     <style>
         @media only screen and (max-width: 350px){
             .row{
@@ -189,7 +153,7 @@
 
                     <div class ="container mb-2 d-flex justify-content-center">
                         <div class="m-3">
-                            <button class ="btn submitBtn btn-primary" name ="submit">Thêm mới</button>
+                            <button type ="submit" class ="btn submitBtn btn-primary" name ="submit">Thêm mới</button>
                         </div>
                         <div class="m-3">
                             <button class ="btn cancelBtn btn-danger" onclick="document.location.href='list.php'">Hủy</button>
