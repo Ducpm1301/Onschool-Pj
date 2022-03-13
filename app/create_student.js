@@ -30,10 +30,6 @@ $(document).ready(function(){
                 // student's info was created, go back to students list
                 showProducts();
             },
-            error: function(xhr, resp, text) {
-                // show error to console
-                console.log(xhr, resp, text);
-            }
         });
     })
 })
